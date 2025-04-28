@@ -10,19 +10,24 @@ import ChooseBox from "./ChooseBox";
 import BuyCard from "./BuyCard";
 import BuyAdvanceCard from "./BuyAdvanceCard";
 import ContactUs from "./ContactUs";
+import Button from "./Button";
+import { FooterIcon,  LinkedinIcon } from "../Icons/Icons";
+
 
 const HeroSection = () => {
     return (
         <div className="">
         <NavBar/>
-        <div className="bg-green-400  w-full flex justify-center items-center min-h-screen -mt-28">
+        <div className="bg-[#155BF2]
+             w-full flex justify-center items-center
+             min-h-screen -mt-28">
             <div className="flex px-6 py-4 gap-20 min-h-full">
               
                 <div className="flex flex-col max-w-xl space-y-6">
-                    <h1 className="text-6xl font-bold leading-tight">
-                        Land job interviews <span className="text-blue-600">10x</span> faster
+                    <h1 className="text-6xl font-bold leading-tight text-white">
+                        Land job interviews <span className="text-shadow-blue-600">10x</span> faster
                     </h1>
-                    <p className="text-lg text-gray-700">
+                    <p className="text-lg text-white">
                         Custom-built resumes that match your goals, keywords, and recruiter expectations.
                     </p>                 
                     <div className="self-start">
@@ -62,7 +67,7 @@ const HeroSection = () => {
 
         </div>
 
-        <div className="mb-52 mt-15 w-[90%] mx-auto flex justify-center items-center flex-col">
+        <div className="mb-30 mt-15 w-[90%] mx-auto flex justify-center items-center flex-col">
             <div className="font-medium text-[#0649E7] text-3xl mb-30">What our Clients have to say</div>
             <div className="flex gap-8 justify-center items-center">
             <ClientFeebackBox/>
@@ -127,9 +132,67 @@ const HeroSection = () => {
                 <ContactUs/>
             </div>
 
-            
-
         </div>
+
+           <div className="ml-20">
+                <Button
+                    leftSymbol= {<FooterIcon/>}
+                    textColor = '#0649E7'
+                />
+                <div className="font-medium text-[#0649E7] text-md ml-4">MobiusEngine</div>
+            </div>
+
+            <div className="bg-[#BCBCBC]  rounded mt-10 w-[30%] border-1 mb-6 ml-20"></div>
+
+            <div className="flex items-start justify-between ml-20 mr-20 gap-16">
+                {/* Address */}
+                <div>
+                    <div className="text-[#0649E7] font-medium mb-2">Address</div>
+                    <div className="text-[#0649E7]">
+                    1875 Mission St Ste 103 #450<br />
+                    San Francisco, CA 94103
+                    </div>
+                </div>
+
+                {/* Email */}
+                <div>
+                    <div className="text-[#0649E7] font-medium mb-2">Email</div>
+                    <div className="text-[#0649E7]">finance@mobiusengine.ai</div>
+                </div>
+
+                {/* Telephone */}
+                <div>
+                    <div className="text-[#0649E7] font-medium mb-2">Telephone</div>
+                    <div className="text-[#0649E7]">650-889-6026</div>
+                </div>
+
+                <div>
+                    <div className="text-[#0649E7] font-medium mb-2">Socials</div>
+                    <div className="flex gap-4">
+                        <div className="w-8 h-8 rounded-full border border-[#0649E7] flex items-center justify-center">
+                        <LinkedinIcon />
+                        </div>
+                        <div className="w-8 h-8 rounded-full border border-[#0649E7] flex items-center justify-center">
+                        <LinkedinIcon/>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div className="mt-7 h-14 bg-[#0649E7] text-white flex justify-between items-center ">
+                     <div className="ml-3">
+                     © 2023 Mobiusservices LLC
+                     </div>
+                     <div className="flex mr-3 gap-5">
+                        <div>
+                        Terms & Conditions
+                        </div>
+                        <div>
+                        Privacy Policy
+                        </div>
+                     </div>
+                </div>
+
 
         </div>
     )
